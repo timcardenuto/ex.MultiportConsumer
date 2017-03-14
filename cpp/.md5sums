@@ -1,0 +1,10 @@
+33a6e5f3c01f806c5a10a1b459125ab0  main.cpp
+8bfcd22353c3a57fee561ad86ee2a56b  reconf
+95b5717d377417292ab5a624914543c2  MultiportConsumer_base.h
+09a60c39067d7d963ab1e166f9f31427  MultiportConsumer_base.cpp
+2ee8c84222ba323a2cffaf61e7063376  configure.ac
+c8f4f86367f2c9041ea29ce3264adf40  MultiportConsumer.h
+e9909c05af771dc499f6398affe8a138  Makefile.am.ide
+62e31ab44e705c114ef722b33d96fe0e  MultiportConsumer.cpp
+2b2faa5cfc83438427491f4be5d6ee59  build.sh
+60c72b8baee220a930fcc2700aa1655a  Makefile.am
