@@ -1,12 +1,3 @@
-/**************************************************************************
-
-    This is the component code. This file contains the child class where
-    custom functionality can be added to the component. Custom
-    functionality to the base class can be extended here. Access to
-    the ports can also be done from this class
-
-**************************************************************************/
-
 #include "MultiportConsumer.h"
 
 PREPARE_LOGGING(MultiportConsumer_i)
@@ -14,8 +5,6 @@ PREPARE_LOGGING(MultiportConsumer_i)
 MultiportConsumer_i::MultiportConsumer_i(const char *uuid, const char *label) :
     MultiportConsumer_base(uuid, label)
 {
-    // Avoid placing constructor code here. Instead, use the "constructor" function.
-
 }
 
 MultiportConsumer_i::~MultiportConsumer_i()

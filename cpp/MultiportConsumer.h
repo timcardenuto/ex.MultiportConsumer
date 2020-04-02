@@ -13,6 +13,8 @@ class MultiportConsumer_i : public MultiportConsumer_base
         void constructor();
 
         int serviceFunction();
+
+    protected:
 };
 
 #endif // MULTIPORTCONSUMER_I_IMPL_H

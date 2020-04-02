@@ -2,10 +2,10 @@
 #include "ossie/ossieSupport.h"
 
 #include "MultiportConsumer.h"
-int main(int argc, char* argv[])
-{
-    MultiportConsumer_i* MultiportConsumer_servant;
-    Component::start_component(MultiportConsumer_servant, argc, argv);
-    return 0;
+extern "C" {
+    Resource_impl* make_component(const std::string& uuid, const std::string& identifier)
+    {
+        return new MultiportConsumer_i(uuid.c_str(), identifier.c_str());
+    }
 }
 

@@ -14,19 +14,23 @@ MultiportConsumer_base::MultiportConsumer_base(const char *uuid, const char *lab
     Component(uuid, label),
     ThreadedComponent()
 {
+    setThreadName(label);
+
     loadProperties();
 
     dataFloat_in = new bulkio::InFloatPort("dataFloat_in");
+    dataFloat_in->setLogger(this->_baseLog->getChildLogger("dataFloat_in", "ports"));
     addPort("dataFloat_in", dataFloat_in);
     burstFloat_in = new burstio::BurstFloatIn("burstFloat_in");
+    burstFloat_in->setLogger(this->_baseLog->getChildLogger("burstFloat_in", "ports"));
     addPort("burstFloat_in", burstFloat_in);
 }
 
 MultiportConsumer_base::~MultiportConsumer_base()
 {
-    delete dataFloat_in;
+    dataFloat_in->_remove_ref();
     dataFloat_in = 0;
-    delete burstFloat_in;
+    burstFloat_in->_remove_ref();
     burstFloat_in = 0;
 }
 
@@ -63,5 +67,6 @@ void MultiportConsumer_base::releaseObject() throw (CORBA::SystemException, CF::
 void MultiportConsumer_base::loadProperties()
 {
 }
+
 
 
